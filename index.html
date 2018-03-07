@@ -8,7 +8,7 @@
   <title>Train Schedule</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -30,30 +30,27 @@
 
     <div class="panel panel-default">
       <div class="panel-heading" id="midrow">
-        <h4>Current Employee</h4>
+        <h4>Current Train Schedule</h4>
       </div>
       <table class="table">
         <thead>
-          <th>
+          <tr>
             <th scope="col"></th>
-            <th scope="col">Employee Name</th>
-            <th scope="col">Role</th>
-            <th scope="col">Start date</th>
-            <th scope="col">Months Worked</th>
-            <th scope="col">Monthly Rate ($)</th>
-            <th scope="col">Total Billed ($)</th>
-          </th>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Mins Away ($)</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row"></th>
             <td id=""></td>
-            <td id="eName">"</td>
-            <td id="role">'</td>
-            <td id="sDate">''</td>
-            <td id="mWorked">'</td>
-            <td id="mRate">''</td>
-            <td id="tBilled">'</td>
+            <td id="tName">"</td>
+            <td id="tDestination">'</td>
+            <td id="tFrequency">''</td>
+            <td id="tNext">'</td>
+            <td id="tAway">''</td>
           </tr>
         </tbody>
       </table>
@@ -63,30 +60,30 @@
 
     <div class="panel panel-default">
       <div class="panel-heading" id="midrow">
-        <h4>Add Employee</h4>
+        <h4>Add Train</h4>
       </div>
       <div class="panel-body">
         <div class="row-md-12">
           <form>
             <div class="form-group">
-              <label for="Add Employee">Employee Name</label>
-              <input type="add" class="form-control" id="addEmployee" aria-describedby="emailHelp" placeholder="Enter Name">
+              <label for="Add Employee">Train Name</label>
+              <input type="add" class="form-control" id="addTrain" aria-describedby="emailHelp" placeholder="Enter Name">
               <small id="addit" class="form-text text-muted"></small>
             </div>
             <div class="form-group">
-              <label for="startYear">Role</label>
-              <input type="role" class="form-control" id="addRole" placeholder="role">
+              <label for="startYear">Destination</label>
+              <input type="role" class="form-control" id="addDestination" placeholder="Destination">
             </div>
             <div class="form-group">
-              <label for="startYear">Start Date</label>
-              <input type="password" class="form-control" id="startDate" placeholder="MM/DD/YYYY">
+              <label for="startYear">First Train Time (HH:mm military time)</label>
+              <input type="password" class="form-control" id="addDate" placeholder="HH:mm">
             </div>
             <br>
             <div class="form-group">
-              <label for="endYear">Monthly Rate</label>
-              <input type="password" class="form-control" id="monthlyRate" placeholder="Rate">
+              <label for="endYear">Frequency (mins)</label>
+              <input type="password" class="form-control" id="addFrequency" placeholder="Rate">
               <br>
-              <button type="submit" class="btn btn-primary" id="submit">Search</button>
+              <button type="submit" class="btn btn-primary" id="submit">Submit</button>
             </div>
           </form>
         </div>

@@ -1,6 +1,6 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyAHVyIQYFy-h-7FmtobcK3J_AlX5y-FxR0",
+  apiKey: "",
   authDomain: "employee-data-management-2e2dd.firebaseapp.com",
   databaseURL: "https://employee-data-management-2e2dd.firebaseio.com",
   projectId: "employee-data-management-2e2dd",
